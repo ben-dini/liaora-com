@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Root -->
+    <url>
+        <loc>https://liaora.com/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Pages (Direct Links referenced in App.tsx) -->
+    <url>
+        <loc>https://liaora.com/impressum</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://liaora.com/datenschutz</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>

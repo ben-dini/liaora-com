@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "title": "Costruiamo infrastruttura silenziosa per la mente umana.",
+        "subline": "Sovranità digitale attraverso sistemi calmi, privacy e design rispettoso dell’attenzione.",
+        "cta": "Leggi i principi",
+        "cta_secondary": "Esplora il sistema"
+    },
+    "identity": {
+        "label": "Identità",
+        "text": "LIAORA è un’iniziativa indipendente dedicata alla sovranità digitale. Progettiamo sistemi che rispettano l’attenzione umana e proteggono la privacy intellettuale in un’epoca di rumore.",
+        "statement": "Non un prodotto. Uno standard."
+    },
+    "principles": {
+        "label": "Principi",
+        "items": [
+            {
+                "title": "Silenzio by design",
+                "text": "La tecnologia deve essere presente quando serve e invisibile quando non serve. Rifiutiamo le metriche dell’economia dell’attenzione."
+            },
+            {
+                "title": "Sovranità radicale",
+                "text": "I tuoi dati, i tuoi modelli, la tua logica — sotto il tuo controllo. Nessuna dipendenza nascosta."
+            },
+            {
+                "title": "Chiarezza prima della velocità",
+                "text": "Struttura, leggibilità, integrità. Niente hype, niente promesse vuote."
+            },
+            {
+                "title": "Dignità dell’utente",
+                "text": "Proteggiamo attenzione, pensiero e tempo."
+            }
+        ]
+    },
+    "origin": {
+        "label": "Origine",
+        "vision": "LIAORA è il livello di visione.",
+        "system": "L1AORA è il livello di sistema.",
+        "core": "L1A1 è il nucleo.",
+        "quote": "La forma segue il pensiero — e il pensiero ha bisogno di silenzio."
+    },
+    "status": {
+        "label": "Stato attuale",
+        "text": "Le fondamenta sono attive. Gli artefatti pubblici verranno pubblicati progressivamente.",
+        "subtext": "Nessuna tempistica. Nessun hype."
+    },
+    "footer": {
+        "copyright": "© 2026 LIAORA",
+        "privacy": "Privacy",
+        "imprint": "Note legali",
+        "contact": "contact@liaora.com"
+    },
+    "legal": {
+        "imprint": {
+            "title": "Note legali",
+            "tmg": "Informazioni secondo § 5 TMG",
+            "contact": "Contatto",
+            "liability": {
+                "title": "Responsabilità per i contenuti",
+                "text": "Come fornitore di servizi, siamo responsabili dei nostri contenuti su queste pagine secondo le leggi generali ai sensi del § 7 Comma 1 TMG."
+            },
+            "copyright": {
+                "title": "Copyright",
+                "text": "I contenuti e le opere creati dai gestori del sito su queste pagine sono soggetti alla legge tedesca sul diritto d'autore."
+            }
+        },
+        "privacy": {
+            "title": "Informativa sulla privacy",
+            "intro": "La protezione dei tuoi dati è importante per noi.",
+            "sections": {
+                "general": {
+                    "title": "1. Generale",
+                    "text": "Questo sito web serve esclusivamente a fornire informazioni. Non avviene alcuna registrazione utente, tracciamento o profilazione."
+                },
+                "logs": {
+                    "title": "2. Log del server",
+                    "text": "Quando si accede al sito web, i dati tecnicamente necessari possono essere elaborati temporaneamente."
+                },
+                "cookies": {
+                    "title": "3. Cookie",
+                    "text": "Questo sito web non utilizza cookie."
+                },
+                "thirdParty": {
+                    "title": "4. Terze parti",
+                    "text": "Non vengono utilizzati servizi esterni di tracciamento, analisi o marketing."
+                },
+                "contact": {
+                    "title": "5. Contatto",
+                    "text": "Quando ci contatti via email, i dati trasmessi vengono utilizzati esclusivamente per elaborare la richiesta."
+                }
+            }
+        }
+    }
+}

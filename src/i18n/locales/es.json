@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "title": "Construimos infraestructura silenciosa para la mente humana.",
+        "subline": "Soberanía digital a través de sistemas tranquilos, privacidad y diseño respetuoso de la atención.",
+        "cta": "Lee los principios",
+        "cta_secondary": "Explora el sistema"
+    },
+    "identity": {
+        "label": "Identidad",
+        "text": "LIAORA es una iniciativa independiente dedicada a la soberanía digital. Diseñamos sistemas que respetan la atención humana y protegen la privacidad intelectual en una era de ruido.",
+        "statement": "No es un producto. Es un estándar."
+    },
+    "principles": {
+        "label": "Principios",
+        "items": [
+            {
+                "title": "Silencio por diseño",
+                "text": "La tecnología debe estar presente cuando se necesita e invisible cuando no. Rechazamos las métricas de la economía de la atención."
+            },
+            {
+                "title": "Soberanía radical",
+                "text": "Tus datos, tus modelos, tu lógica — bajo tu control. Sin dependencias ocultas."
+            },
+            {
+                "title": "Claridad antes que velocidad",
+                "text": "Estructura, legibilidad, integridad. Sin “hype”, sin promesas vacías."
+            },
+            {
+                "title": "Dignidad del usuario",
+                "text": "Protegemos atención, pensamiento y tiempo."
+            }
+        ]
+    },
+    "origin": {
+        "label": "Origen",
+        "vision": "LIAORA es la capa de visión.",
+        "system": "L1AORA es la capa del sistema.",
+        "core": "L1A1 es el núcleo.",
+        "quote": "La forma sigue al pensamiento — y el pensamiento necesita silencio."
+    },
+    "status": {
+        "label": "Estado actual",
+        "text": "La base está activa. Los artefactos públicos se publicarán de forma progresiva.",
+        "subtext": "Sin calendarios. Sin hype."
+    },
+    "footer": {
+        "copyright": "© 2026 LIAORA",
+        "privacy": "Política de privacidad",
+        "imprint": "Aviso legal",
+        "contact": "contact@liaora.com"
+    },
+    "legal": {
+        "imprint": {
+            "title": "Aviso legal",
+            "tmg": "Información según § 5 TMG",
+            "contact": "Contacto",
+            "liability": {
+                "title": "Responsabilidad por contenidos",
+                "text": "Como proveedor de servicios, somos responsables de nuestros propios contenidos según las leyes generales conforme al § 7 Párrafo 1 TMG."
+            },
+            "copyright": {
+                "title": "Derechos de autor",
+                "text": "Los contenidos y obras creados por los operadores del sitio están sujetos a la ley de derechos de autor alemana."
+            }
+        },
+        "privacy": {
+            "title": "Política de privacidad",
+            "intro": "La protección de sus datos es importante para nosotros.",
+            "sections": {
+                "general": {
+                    "title": "1. General",
+                    "text": "Este sitio web es solo para fines informativos. No hay registro de usuarios, seguimiento ni elaboración de perfiles."
+                },
+                "logs": {
+                    "title": "2. Registros del servidor",
+                    "text": "Al acceder al sitio web, se pueden procesar datos técnicamente necesarios."
+                },
+                "cookies": {
+                    "title": "3. Cookies",
+                    "text": "Este sitio web no utiliza cookies."
+                },
+                "thirdParty": {
+                    "title": "4. Terceros",
+                    "text": "No se utilizan servicios externos de seguimiento, análisis o marketing."
+                },
+                "contact": {
+                    "title": "5. Contacto",
+                    "text": "Al contactar por correo electrónico, los datos transmitidos se utilizan exclusivamente para procesar la solicitud."
+                }
+            }
+        }
+    }
+}

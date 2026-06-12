@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #05050f;
+    color: #8a8a9a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
+  }
+
+  ::selection {
+    background: rgba(139, 92, 246, 0.25);
+  }
+}

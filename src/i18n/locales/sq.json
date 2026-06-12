@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "title": "Ne ndërtojmë infrastrukturë të heshtur për mendjen njerëzore.",
+        "subline": "Sovraniteti digjital përmes sistemeve të qeta, privatësisë dhe dizajnit që respekton vëmendjen.",
+        "cta": "Lexo parimet",
+        "cta_secondary": "Eksploro sistemin"
+    },
+    "identity": {
+        "label": "Identiteti",
+        "text": "LIAORA është një nismë e pavarur e përkushtuar ndaj sovranitetit digjital. Ne dizajnojmë sisteme që respektojnë vëmendjen njerëzore dhe mbrojnë privatësinë intelektuale në një epokë zhurme.",
+        "statement": "Jo një produkt. Një standard."
+    },
+    "principles": {
+        "label": "Parimet",
+        "items": [
+            {
+                "title": "Heshtje me dizajn",
+                "text": "Teknologjia duhet të jetë e pranishme kur duhet dhe e padukshme kur s’duhet. Ne refuzojmë metrikat e ekonomisë së vëmendjes."
+            },
+            {
+                "title": "Sovranitet radikal",
+                "text": "Të dhënat e tua, modelet e tua, logjika jote — nën kontrollin tënd. Pa varësi të fshehta."
+            },
+            {
+                "title": "Qartësi para shpejtësisë",
+                "text": "Strukturë, lexueshmëri, integritet. Pa hype, pa premtime boshe."
+            },
+            {
+                "title": "Dinjteti i përdoruesit",
+                "text": "Ne mbrojmë vëmendjen, mendimin dhe kohën."
+            }
+        ]
+    },
+    "origin": {
+        "label": "Origjina",
+        "vision": "LIAORA është shtresa e vizionit.",
+        "system": "L1AORA është shtresa e sistemit.",
+        "core": "L1A1 është bërthama.",
+        "quote": "Forma ndjek mendimin — dhe mendimi ka nevojë për heshtje."
+    },
+    "status": {
+        "label": "Gjendja aktuale",
+        "text": "Themeli është aktiv. Artefaktet publike do të publikohen gradualisht.",
+        "subtext": "Pa afate. Pa zhurmë."
+    },
+    "footer": {
+        "copyright": "© 2026 LIAORA",
+        "privacy": "Privatësia",
+        "imprint": "Njoftim ligjor",
+        "contact": "contact@liaora.com"
+    },
+    "legal": {
+        "imprint": {
+            "title": "Impresum",
+            "tmg": "Informacion sipas § 5 TMG",
+            "contact": "Kontakt",
+            "liability": {
+                "title": "Përgjegjësia për përmbajtjen",
+                "text": "Si ofrues shërbimi, ne jemi përgjegjës për përmbajtjen tonë në këto faqe sipas ligjeve të përgjithshme në përputhje me § 7 Paragrafi 1 TMG."
+            },
+            "copyright": {
+                "title": "E drejta e autorit",
+                "text": "Përmbajtja dhe veprat e krijuara nga operatorët e faqes në këto faqe i nënshtrohen ligjit gjerman për të drejtën e autorit."
+            }
+        },
+        "privacy": {
+            "title": "Politika e Privatësisë",
+            "intro": "Mbrojtja e të dhënave tuaja është e rëndësishme për ne.",
+            "sections": {
+                "general": {
+                    "title": "1. Të përgjithshme",
+                    "text": "Kjo faqe interneti shërben vetëm për të ofruar informacion. Nuk ka regjistrim të përdoruesit, gjurmim ose profilizim."
+                },
+                "logs": {
+                    "title": "2. Regjistrat e serverit",
+                    "text": "Gjatë qasjes në faqen e internetit, të dhënat teknikisht të nevojshme mund të përpunohen përkohësisht."
+                },
+                "cookies": {
+                    "title": "3. Cookies",
+                    "text": "Kjo faqe interneti nuk përdor cookies."
+                },
+                "thirdParty": {
+                    "title": "4. Palët e treta",
+                    "text": "Nuk përdoren shërbime të jashtme gjurmimi, analize ose marketingu."
+                },
+                "contact": {
+                    "title": "5. Kontakt",
+                    "text": "Kur na kontaktoni me e-mail, të dhënat e transmetuara përdoren ekskluzivisht për të përpunuar kërkesën."
+                }
+            }
+        }
+    }
+}

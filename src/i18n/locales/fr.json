@@ -1,0 +1,93 @@
+{
+    "hero": {
+        "title": "Nous construisons une infrastructure silencieuse pour l’esprit humain.",
+        "subline": "Souveraineté numérique par des systèmes calmes, la confidentialité et un design respectueux de l’attention.",
+        "cta": "Lire les principes",
+        "cta_secondary": "Explorer le système"
+    },
+    "identity": {
+        "label": "Identité",
+        "text": "LIAORA est une initiative indépendante dédiée à la souveraineté numérique. Nous concevons des systèmes qui respectent l’attention humaine et protègent la vie privée intellectuelle à l’ère du bruit.",
+        "statement": "Pas un produit. Une norme."
+    },
+    "principles": {
+        "label": "Principes",
+        "items": [
+            {
+                "title": "Silence par conception",
+                "text": "La technologie doit être présente quand il le faut et invisible le reste du temps. Nous rejetons les métriques de l’économie de l’attention."
+            },
+            {
+                "title": "Souveraineté radicale",
+                "text": "Vos données, vos modèles, votre logique — sous votre contrôle. Pas de dépendances cachées."
+            },
+            {
+                "title": "Clarté avant la vitesse",
+                "text": "Structure, lisibilité, intégrité. Pas de “hype”, pas de promesses creuses."
+            },
+            {
+                "title": "Dignité de l’utilisateur",
+                "text": "Nous protégeons l’attention, la pensée et le temps."
+            }
+        ]
+    },
+    "origin": {
+        "label": "Origine",
+        "vision": "LIAORA est la couche de vision.",
+        "system": "L1AORA est la couche système.",
+        "core": "L1A1 est le noyau.",
+        "quote": "La forme suit la pensée — et la pensée a besoin de silence."
+    },
+    "status": {
+        "label": "État actuel",
+        "text": "Les fondations sont actives. Les artefacts publics seront publiés progressivement.",
+        "subtext": "Aucun calendrier. Aucun battage médiatique."
+    },
+    "footer": {
+        "copyright": "© 2026 LIAORA",
+        "privacy": "Confidentialité",
+        "imprint": "Mentions légales",
+        "contact": "contact@liaora.com"
+    },
+    "legal": {
+        "imprint": {
+            "title": "Mentions légales",
+            "tmg": "Information selon § 5 TMG",
+            "contact": "Contact",
+            "liability": {
+                "title": "Responsabilité du contenu",
+                "text": "En tant que prestataire de services, nous sommes responsables de nos propres contenus conformément aux lois générales selon § 7 Paragraphe 1 TMG."
+            },
+            "copyright": {
+                "title": "Droit d’auteur",
+                "text": "Les contenus et œuvres créés par les exploitants de ce site sont soumis au droit d’auteur allemand."
+            }
+        },
+        "privacy": {
+            "title": "Politique de confidentialité",
+            "intro": "La protection de vos données est importante pour nous.",
+            "sections": {
+                "general": {
+                    "title": "1. Généralités",
+                    "text": "Ce site web sert uniquement à fournir des informations. Aucun enregistrement d'utilisateur, suivi ou profilage n'a lieu."
+                },
+                "logs": {
+                    "title": "2. Journaux serveur",
+                    "text": "Lors de l'accès au site web, des données techniquement nécessaires peuvent être traitées temporairement."
+                },
+                "cookies": {
+                    "title": "3. Cookies",
+                    "text": "Ce site web n'utilise pas de cookies."
+                },
+                "thirdParty": {
+                    "title": "4. Tiers",
+                    "text": "Aucun service de suivi, d'analyse ou de marketing externe n'est utilisé."
+                },
+                "contact": {
+                    "title": "5. Contact",
+                    "text": "Lors de la prise de contact par e-mail, les données transmises sont utilisées exclusivement pour traiter la demande."
+                }
+            }
+        }
+    }
+}

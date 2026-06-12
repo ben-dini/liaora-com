@@ -1,0 +1,16 @@
+{
+    "name": "L1A1 Core",
+    "short_name": "L1A1",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#050505",
+    "description": "System Online. No Interface Required.",
+    "icons": [
+        {
+            "src": "/favicon-v2.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        }
+    ]
+}

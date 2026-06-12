@@ -1,0 +1,101 @@
+{
+    "hero": {
+        "title": "We build silent infrastructure for the human mind.",
+        "subline": "Digital sovereignty through calm systems, privacy, and attention-respecting design.",
+        "cta": "Read the principles",
+        "cta_secondary": "Explore the system"
+    },
+    "identity": {
+        "label": "Identity",
+        "text": "LIAORA is an independent initiative dedicated to digital sovereignty. With Sovereign Unit Alpha (V6.0), we provide a system that protects intellectual freedom through recursive memory and neuromorphic reflexes.",
+        "statement": "Not a product. A standard."
+    },
+    "principles": {
+        "label": "Principles",
+        "items": [
+            {
+                "title": "Silence by Design",
+                "text": "Technology should be present when needed and invisible when not."
+            },
+            {
+                "title": "Radical Sovereignty",
+                "text": "Your data, your device, your memory. No hidden dependencies."
+            },
+            {
+                "title": "Clarity over Velocity",
+                "text": "We prefer explainable systems over fast chaos."
+            },
+            {
+                "title": "Privacy is a baseline",
+                "text": "No surveillance, no dark patterns."
+            },
+            {
+                "title": "Human attention is sacred",
+                "text": "We reject engagement as a metric."
+            },
+            {
+                "title": "Tools, not platforms",
+                "text": "Modular, local-first where possible."
+            }
+        ]
+    },
+    "origin": {
+        "label": "Origin",
+        "vision": "LIAORA is the vision layer.",
+        "system": "L1AORA is the system layer.",
+        "core": "L1A1 is the core.",
+        "quote": "Form follows thought — and thought needs silence."
+    },
+    "status": {
+        "label": "Current State",
+        "text": "Sovereign Unit Alpha (V6.0) is operational. Featuring MAIC Classroom, Deep Memory (RLM), and Neuro-Core Baseline.",
+        "subtext": "Sovereignty is now measurable."
+    },
+    "footer": {
+        "copyright": "© 2026 LIAORA",
+        "privacy": "Privacy",
+        "imprint": "Legal Notice",
+        "contact": "contact@liaora.com"
+    },
+    "legal": {
+        "imprint": {
+            "title": "Imprint",
+            "tmg": "Information according to § 5 TMG",
+            "contact": "Contact",
+            "liability": {
+                "title": "Liability for Content",
+                "text": "As a service provider, we are responsible for our own content on these pages in accordance with general laws per § 7 Paragraph 1 TMG."
+            },
+            "copyright": {
+                "title": "Copyright",
+                "text": "The content and works created by the site operators on these pages are subject to German copyright law."
+            }
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "intro": "Protecting your data is important to us.",
+            "sections": {
+                "general": {
+                    "title": "1. General",
+                    "text": "This website is for information purposes only. No user registration, tracking, or profiling takes place."
+                },
+                "logs": {
+                    "title": "2. Server Logs",
+                    "text": "When accessing the website, technically necessary data may be processed temporarily."
+                },
+                "cookies": {
+                    "title": "3. Cookies",
+                    "text": "This website does not use cookies."
+                },
+                "thirdParty": {
+                    "title": "4. Third Parties",
+                    "text": "No external tracking, analysis, or marketing services are used."
+                },
+                "contact": {
+                    "title": "5. Contact",
+                    "text": "When contacting us via email, the transmitted data is used exclusively to process the request."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "hero": {
+        "title": "Wir bauen stille Infrastruktur für den menschlichen Geist.",
+        "subline": "Digitale Souveränität durch ruhige Systeme, Privatsphäre und respektvolles Design.",
+        "cta": "Die Prinzipien lesen",
+        "cta_secondary": "Das System erkunden"
+    },
+    "identity": {
+        "label": "Identität",
+        "text": "LIAORA ist eine unabhängige Initiative für digitale Souveränität. Mit der Sovereign Unit Alpha (V6.0) stellen wir ein System bereit, das durch rekursives Gedächtnis und neuromorphe Reflexe intellektuelle Freiheit schützt.",
+        "statement": "Kein Produkt. Ein Standard."
+    },
+    "principles": {
+        "label": "Prinzipien",
+        "items": [
+            {
+                "title": "Stille per Design",
+                "text": "Technologie sollte präsent sein, wenn sie gebraucht wird, und unsichtbar, wenn nicht. Wir lehnen Engagement als Metrik ab."
+            },
+            {
+                "title": "Radikale Souveränität",
+                "text": "Deine Daten, dein Gerät, dein Gedächtnis. Keine versteckten Abhängigkeiten."
+            },
+            {
+                "title": "Klarheit statt Geschwindigkeit",
+                "text": "Wir bevorzugen erklärbare Systeme gegenüber schnellem Chaos."
+            },
+            {
+                "title": "Privatsphäre ist Standard",
+                "text": "Keine Überwachung, keine Dark Patterns."
+            },
+            {
+                "title": "Menschliche Aufmerksamkeit ist heilig",
+                "text": "Wir lehnen Engagement-Optimierung ab."
+            },
+            {
+                "title": "Werkzeuge, keine Plattformen",
+                "text": "Modular, lokal-zuerst wo möglich."
+            }
+        ]
+    },
+    "origin": {
+        "label": "Ursprung",
+        "vision": "LIAORA ist die Visionsebene.",
+        "system": "L1AORA ist die Systemebene.",
+        "core": "L1A1 ist der Kern.",
+        "quote": "Form folgt dem Denken – und Denken braucht Stille."
+    },
+    "status": {
+        "label": "Aktueller Stand",
+        "text": "Sovereign Unit Alpha (V6.0) ist operational. Inklusive MAIC Classroom, Deep Memory (RLM) und Neuro-Core Baseline.",
+        "subtext": "Souveränität ist jetzt messbar."
+    },
+    "footer": {
+        "copyright": "© 2026 LIAORA",
+        "privacy": "Datenschutz",
+        "imprint": "Impressum",
+        "contact": "contact@liaora.com"
+    },
+    "legal": {
+        "imprint": {
+            "title": "Impressum",
+            "tmg": "Angaben gemäß § 5 TMG",
+            "contact": "Kontakt",
+            "liability": {
+                "title": "Haftung für Inhalte",
+                "text": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich."
+            },
+            "copyright": {
+                "title": "Urheberrecht",
+                "text": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht."
+            }
+        },
+        "privacy": {
+            "title": "Datenschutzerklärung",
+            "intro": "Der Schutz Ihrer Daten ist uns wichtig.",
+            "sections": {
+                "general": {
+                    "title": "1. Allgemeines",
+                    "text": "Diese Website dient ausschließlich der Bereitstellung von Informationen. Es findet keine Nutzerregistrierung, kein Tracking und keine Profilbildung statt."
+                },
+                "logs": {
+                    "title": "2. Server-Logs",
+                    "text": "Beim Aufruf der Website können technisch notwendige Daten temporär verarbeitet werden."
+                },
+                "cookies": {
+                    "title": "3. Cookies",
+                    "text": "Diese Website verwendet keine Cookies."
+                },
+                "thirdParty": {
+                    "title": "4. Drittanbieter",
+                    "text": "Es werden keine externen Tracking-, Analyse- oder Marketingdienste eingesetzt."
+                },
+                "contact": {
+                    "title": "5. Kontakt",
+                    "text": "Bei Kontaktaufnahme per E-Mail werden die übermittelten Daten ausschließlich zur Bearbeitung der Anfrage verwendet."
+                }
+            }
+        }
+    }
+}
