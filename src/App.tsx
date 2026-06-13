@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocale } from "./hooks/useLocale";
 import { SupportedLocale, supportedLocales } from "./i18n";
 import ScrambleLink from "@/components/ScrambleLink";
+import LiaoraLogo from "@/components/LiaoraLogo";
 import { sounds } from "@/lib/sounds";
 
 const ECOSYSTEM = [
@@ -181,15 +182,7 @@ const App = () => {
       }}>
         {/* Logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <div style={{
-            width: 40, height: 40, borderRadius: '50%',
-            border: `1px solid ${isDark ? 'rgba(255,255,255,0.15)' : 'rgba(5,5,15,0.15)'}`,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(5,5,15,0.04)',
-            flexShrink: 0,
-          }}>
-            <span style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', color: isDark ? 'rgba(255,255,255,0.65)' : 'rgba(5,5,15,0.55)' }}>L</span>
-          </div>
+          <LiaoraLogo size={44} />
           <div style={{ width: 1, height: 24, background: isDark ? 'rgba(200,216,245,0.15)' : 'rgba(5,5,15,0.1)', flexShrink: 0 }} />
           <ScrambleLink
             label="LIAORA"
