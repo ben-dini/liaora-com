@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Sun, Moon } from "lucide-react";
 import { useLocale } from "./hooks/useLocale";
 import { SupportedLocale, supportedLocales } from "./i18n";
 import ScrambleLink from "@/components/ScrambleLink";
@@ -25,7 +23,26 @@ const App = () => {
     return saved !== 'light';
   });
 
+  const [soundEnabled, setSoundEnabled] = useState(() => {
+    return localStorage.getItem('liaora-sounds') !== 'false';
+  });
+
   const [scrolled, setScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('liaora-sounds', soundEnabled ? 'true' : 'false');
+    sounds.setMute(!soundEnabled);
+  }, [soundEnabled]);
+
+  useEffect(() => {
+    const handleOutside = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest('.liaora-lang-container')) setLangOpen(false);
+    };
+    if (langOpen) document.addEventListener('click', handleOutside);
+    return () => document.removeEventListener('click', handleOutside);
+  }, [langOpen]);
 
   useEffect(() => {
     localStorage.setItem('liaora-theme', isDark ? 'dark' : 'light');
@@ -156,55 +173,151 @@ const App = () => {
       {/* Header */}
       <header style={{
         position: 'sticky', top: 0, zIndex: 50,
-        padding: '0 24px', height: 64,
+        padding: '0 clamp(24px, 5vw, 48px)', height: 72,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         background: c.headerBg, backdropFilter: 'blur(20px)',
-        borderBottom: `1px solid ${scrolled ? c.border : 'transparent'}`,
-        transition: 'border-color 0.3s ease',
+        borderBottom: scrolled ? `1px solid ${c.border}` : '1px solid transparent',
+        transition: 'all 0.4s cubic-bezier(0.16,1,0.3,1)',
       }}>
         {/* Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <div style={{
-            width: 28, height: 28, borderRadius: '50%',
-            border: `1px solid ${isDark ? 'rgba(255,255,255,0.14)' : 'rgba(5,5,15,0.14)'}`,
+            width: 40, height: 40, borderRadius: '50%',
+            border: `1px solid ${isDark ? 'rgba(255,255,255,0.15)' : 'rgba(5,5,15,0.15)'}`,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(5,5,15,0.03)',
+            background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(5,5,15,0.04)',
+            flexShrink: 0,
           }}>
-            <span style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: '0.05em', color: isDark ? 'rgba(255,255,255,0.55)' : 'rgba(5,5,15,0.45)' }}>L</span>
+            <span style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', color: isDark ? 'rgba(255,255,255,0.65)' : 'rgba(5,5,15,0.55)' }}>L</span>
           </div>
-          <div style={{ width: 1, height: 18, background: isDark ? 'rgba(255,255,255,0.09)' : 'rgba(5,5,15,0.1)' }} />
+          <div style={{ width: 1, height: 24, background: isDark ? 'rgba(200,216,245,0.15)' : 'rgba(5,5,15,0.1)', flexShrink: 0 }} />
           <ScrambleLink
             label="LIAORA"
             href="https://liaora.com"
             target="_self"
             textClassName="aurora-text"
             autoScramble
-            style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase' }}
+            style={{ fontFamily: "'Josefin Sans', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase' }}
           />
         </div>
 
-        {/* Controls */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-          <div style={{ display: 'flex', gap: 12 }} className="hidden sm:flex">
-            {supportedLocales.map(lang => (
-              <button
-                key={lang}
-                onClick={() => { changeLocale(lang as SupportedLocale); sounds.playTick(); }}
-                style={{
-                  fontFamily: "'Space Mono', monospace", fontSize: 9, letterSpacing: '0.15em',
-                  textTransform: 'uppercase', background: 'none', border: 'none', padding: 0,
-                  cursor: 'pointer', color: locale === lang ? c.heading : c.muted,
-                  opacity: locale === lang ? 1 : 0.5, transition: 'opacity 0.2s',
-                }}
-              >{lang}</button>
-            ))}
-          </div>
+        {/* Controls: Sound + Theme + Language */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {/* Sound button */}
           <button
-            onClick={() => { setIsDark(p => !p); sounds.playClick(); }}
-            style={{ background: 'none', border: 'none', padding: 4, cursor: 'pointer', color: c.muted, display: 'flex', alignItems: 'center' }}
+            onClick={() => { setSoundEnabled(p => !p); sounds.playClick(); }}
+            aria-label="Toggle Sound"
+            style={{
+              width: 36, height: 36, borderRadius: '50%',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(5,5,15,0.04)',
+              border: `1px solid ${c.border}`, color: c.heading,
+              cursor: 'pointer', transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
+            }}
+            onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.08)'; e.currentTarget.style.borderColor = 'rgba(77,163,255,0.4)'; sounds.playTick(); }}
+            onMouseOut={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = c.border; }}
           >
-            {isDark ? <Sun size={14} /> : <Moon size={14} />}
+            {soundEnabled ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              </svg>
+            ) : (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+              </svg>
+            )}
           </button>
+
+          {/* Theme button */}
+          <button
+            onClick={() => { setIsDark(p => !p); sounds.playChime(); }}
+            aria-label="Toggle Theme"
+            style={{
+              width: 36, height: 36, borderRadius: '50%',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(5,5,15,0.04)',
+              border: `1px solid ${c.border}`, color: c.heading,
+              cursor: 'pointer', transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
+            }}
+            onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.08) rotate(15deg)'; e.currentTarget.style.borderColor = 'rgba(77,163,255,0.4)'; sounds.playTick(); }}
+            onMouseOut={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.borderColor = c.border; }}
+          >
+            {isDark ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+            ) : (
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            )}
+          </button>
+
+          {/* Language dropdown pill */}
+          <div className="liaora-lang-container" style={{ position: 'relative', zIndex: 50 }}>
+            <button
+              onClick={() => { setLangOpen(p => !p); sounds.playClick(); }}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 8,
+                height: 36, padding: '0 14px',
+                background: isDark ? 'rgba(255,255,255,0.04)' : 'rgba(5,5,15,0.04)',
+                border: `1px solid ${langOpen ? 'rgba(77,163,255,0.4)' : c.border}`,
+                borderRadius: 9999, cursor: 'pointer', color: c.heading,
+                fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' as const,
+                backdropFilter: 'blur(20px)', transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.04)'; sounds.playTick(); }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'none'; }}
+            >
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4DA3FF', boxShadow: '0 0 8px #4DA3FF', display: 'inline-block' }} />
+              <span style={{ display: 'inline-block', transition: 'transform 0.6s cubic-bezier(0.34,1.56,0.64,1)', transform: isFlipped ? 'rotateX(360deg)' : 'none' }}>{locale.toUpperCase()}</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'transform 0.3s', transform: langOpen ? 'rotate(180deg)' : 'none', opacity: 0.55 }}>
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+
+            {/* Dropdown panel */}
+            <div style={{
+              position: 'absolute', top: 'calc(100% + 8px)', right: 0, width: 160,
+              background: isDark ? 'rgba(8,8,20,0.92)' : 'rgba(248,249,252,0.95)',
+              border: `1px solid ${c.border}`, borderRadius: 14, padding: 8,
+              backdropFilter: 'blur(30px)',
+              boxShadow: isDark ? '0 10px 30px rgba(0,0,0,0.6)' : '0 10px 30px rgba(15,27,58,0.08)',
+              transition: 'all 0.3s cubic-bezier(0.34,1.56,0.64,1)',
+              opacity: langOpen ? 1 : 0, pointerEvents: langOpen ? 'auto' : 'none',
+              transform: langOpen ? 'scale(1) translateY(0)' : 'scale(0.85) translateY(-8px)',
+              display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6,
+            }}>
+              {(supportedLocales as SupportedLocale[]).map(l => {
+                const isSelected = l === locale;
+                return (
+                  <button
+                    key={l}
+                    onClick={() => {
+                      if (l !== locale) { setIsFlipped(true); changeLocale(l); sounds.playClick(); setTimeout(() => setIsFlipped(false), 600); }
+                      setLangOpen(false);
+                    }}
+                    style={{
+                      padding: '8px 10px', borderRadius: 8, cursor: 'pointer',
+                      border: isSelected ? '1px solid rgba(77,163,255,0.3)' : '1px solid transparent',
+                      background: isSelected ? 'rgba(77,163,255,0.08)' : 'transparent',
+                      color: isSelected ? '#4DA3FF' : c.muted,
+                      fontSize: 11, fontWeight: 700, textTransform: 'uppercase' as const, letterSpacing: '0.05em',
+                      transition: 'all 0.2s',
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#4DA3FF'; e.currentTarget.style.background = 'rgba(77,163,255,0.05)'; sounds.playTick(); }}
+                    onMouseLeave={e => { e.currentTarget.style.color = isSelected ? '#4DA3FF' : c.muted; e.currentTarget.style.background = isSelected ? 'rgba(77,163,255,0.08)' : 'transparent'; }}
+                  >{l.toUpperCase()}</button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </header>
 
@@ -323,19 +436,25 @@ const App = () => {
 
           {/* Legal */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 24 }}>
-            {[
-              { label: 'Terms', to: '/terms' },
-              { label: 'Refund', to: '/refund' },
-              { label: t('footer.imprint') as string, to: '/impressum' },
-              { label: t('footer.privacy') as string, to: '/datenschutz' },
-            ].map(({ label, to }) => (
-              <Link key={to} to={to} style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, letterSpacing: '0.15em', textTransform: 'uppercase', color: c.muted, textDecoration: 'none', opacity: 0.55 }}>
-                {label}
-              </Link>
+            {([
+              { label: 'TERMS', to: '/terms' },
+              { label: 'REFUND', to: '/refund' },
+              { label: (t('footer.imprint') as string).toUpperCase(), to: '/impressum' },
+              { label: (t('footer.privacy') as string).toUpperCase(), to: '/datenschutz' },
+            ] as { label: string; to: string }[]).map(({ label, to }) => (
+              <ScrambleLink
+                key={to}
+                label={label}
+                to={to}
+                style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, letterSpacing: '0.15em', color: c.muted, opacity: 0.55 }}
+              />
             ))}
-            <a href={`mailto:${t('footer.contact')}`} style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, letterSpacing: '0.12em', color: c.muted, textDecoration: 'none', opacity: 0.55 }}>
-              {t('footer.contact')}
-            </a>
+            <ScrambleLink
+              label={t('footer.contact') as string}
+              href={`mailto:${t('footer.contact')}`}
+              target="_self"
+              style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, letterSpacing: '0.12em', color: c.muted, opacity: 0.55 }}
+            />
           </div>
 
           {/* Copyright */}

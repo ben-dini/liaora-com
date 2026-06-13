@@ -48,7 +48,7 @@
     },
     "status": {
         "label": "Current State",
-        "text": "Sovereign Unit Alpha (V6.0) is operational. Featuring MAIC Classroom, Deep Memory (RLM), and Neuro-Core Baseline.",
+        "text": "Sovereign Unit Alpha (V6.0) is operational. Deep Memory (RLM) and Neuro-Core Baseline.",
         "subtext": "Sovereignty is now measurable."
     },
     "footer": {
