@@ -36,13 +36,14 @@ export default function LiaoraLogo({ size = 44, className }: LiaoraLogoProps) {
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         position: 'relative', zIndex: 1,
         boxShadow: '0 0 28px rgba(150,170,255,0.1)',
-        gap: 0,
+        gap: 1,
       }}>
         <span style={{
           fontFamily: "'Josefin Sans', 'Futura', sans-serif",
           fontWeight: 700,
-          fontSize: px * 0.195,
-          letterSpacing: px * 0.018,
+          fontSize: px * 0.175,
+          letterSpacing: px * 0.02,
+          paddingLeft: px * 0.02,
           lineHeight: 1,
           background: 'linear-gradient(125deg, #c8d8f5 0%, #ddc8f8 25%, #a8ede0 50%, #e8c8d8 75%, #c8d8f5 100%)',
           backgroundSize: '300% 300%',
@@ -54,15 +55,16 @@ export default function LiaoraLogo({ size = 44, className }: LiaoraLogoProps) {
         <span style={{
           fontFamily: "'Josefin Sans', 'Futura', sans-serif",
           fontWeight: 700,
-          fontSize: px * 0.195,
-          letterSpacing: px * 0.018,
+          fontSize: px * 0.175,
+          letterSpacing: px * 0.02,
+          paddingLeft: px * 0.02,
           lineHeight: 1,
-          background: 'linear-gradient(125deg, #a8ede0 0%, #c8d8f5 33%, #ddc8f8 66%, #b8ead5 100%)',
+          background: 'linear-gradient(125deg, #c8d8f5 0%, #ddc8f8 25%, #a8ede0 50%, #e8c8d8 75%, #c8d8f5 100%)',
           backgroundSize: '300% 300%',
           WebkitBackgroundClip: 'text',
           backgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-          animation: 'liaoraRingShimmer 9s ease-in-out infinite reverse',
+          animation: 'liaoraRingShimmer 9s ease-in-out infinite',
         }}>ORA</span>
       </div>
 
