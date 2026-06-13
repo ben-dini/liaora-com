@@ -9,13 +9,8 @@ export default function LiaoraLogo({ size = 44, className }: LiaoraLogoProps) {
   const px = size;
   const inner = px * 0.82;
   const dot = px * 0.055;
-  const cx = inner / 2;
-  const fs = px * 0.175;
-  const tl = inner * 0.68;
-  const y1 = inner * 0.37;
-  const y2 = inner * 0.63;
+  const fs = px * 0.22;
   const delay = useMemo(() => `${-(Date.now() % 10000)}ms`, []);
-  const uid = useMemo(() => `ll${Math.round(px)}`, [px]);
 
   return (
     <div
@@ -37,40 +32,25 @@ export default function LiaoraLogo({ size = 44, className }: LiaoraLogoProps) {
       <div style={{
         width: inner, height: inner, borderRadius: '50%',
         background: 'radial-gradient(circle at 38% 38%, #1e1e2a 0%, #111118 60%, #0a0a10 100%)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         position: 'relative', zIndex: 1,
         boxShadow: '0 0 28px rgba(150,170,255,0.1)',
+        gap: `${fs * 0.18}px`,
       }}>
-        <svg width={inner} height={inner} viewBox={`0 0 ${inner} ${inner}`} style={{ overflow: 'visible' }}>
-          <defs>
-            <linearGradient id={uid} x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%"   stopColor="#c8d8f5" />
-              <stop offset="30%"  stopColor="#ddc8f8" />
-              <stop offset="60%"  stopColor="#a8ede0" />
-              <stop offset="100%" stopColor="#c8d8f5" />
-            </linearGradient>
-          </defs>
-          <text
-            x={cx} y={y1}
-            textAnchor="middle" dominantBaseline="central"
-            fill={`url(#${uid})`}
-            fontFamily="'Josefin Sans', 'Futura', sans-serif"
-            fontWeight="700"
-            fontSize={fs}
-            textLength={tl}
-            lengthAdjust="spacing"
-          >L1A</text>
-          <text
-            x={cx} y={y2}
-            textAnchor="middle" dominantBaseline="central"
-            fill={`url(#${uid})`}
-            fontFamily="'Josefin Sans', 'Futura', sans-serif"
-            fontWeight="700"
-            fontSize={fs}
-            textLength={tl}
-            lengthAdjust="spacing"
-          >ORA</text>
-        </svg>
+        {(['L1A', 'ORA'] as const).map(row => (
+          <span key={row} style={{
+            background: 'linear-gradient(90deg, #c8d8f5 0%, #ddc8f8 30%, #a8ede0 60%, #c8d8f5 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            fontFamily: "'Josefin Sans', 'Futura', sans-serif",
+            fontWeight: 700,
+            fontSize: fs,
+            letterSpacing: '0.12em',
+            paddingLeft: '0.12em',
+            lineHeight: 1,
+          }}>{row}</span>
+        ))}
       </div>
 
       <div style={{
